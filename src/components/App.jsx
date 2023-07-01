@@ -61,6 +61,7 @@ class App extends Component {
     return (
       <Container>
         <h1>Phonebook</h1>
+        <Notification message="Add number to contacts" />
         <ContactForm createContact={this.createContact} />
 
         <Title>Contacts</Title>

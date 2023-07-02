@@ -34,12 +34,15 @@ class App extends Component {
       const isNumberExist = prevState.contacts.find(
         ({ number }) => number.toLowerCase() === newContact.number.toLowerCase()
       );
+      
 
       if (isNameExist) {
         return alert(`${newContact.name} is already in contacts.`);
       }
       if (isNumberExist) {
-        return alert(`${newContact.number} is already in contacts.`);
+        return alert(
+          `Number ${newContact.number} already exists in contacts with the name ${isNumberExist.name}.`
+        );
       }
       return { contacts: [...prevState.contacts, newContact] };
     });
